@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900&display=swap');
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+header
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+header .logo:hover
+{
+    position: absolute;
+    color: #000000;
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 2em;
+    text-transform: uppercase;
+    Letter-spacing: 2px;
+}
+section
+{
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    padding: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+section img
+{
+    position: absolute;
+    top: 0;
+    Left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+section h2
+{
+    top: 220px;
+    font-size: 45px;
+}
+label
+{
+    position: absolute;
+    background: aqua;
+    top: 320px;
+    Left: 345px;
+    width: 800px;
+    height: 100px;
+    align-content: center;
+
+}
+label input
+{
+    width: 100%;
+    padding: 8px;
+    border: solid 2px #aaa;
+    border-radius: 10px;
+
+}
+label button
+{
+    display: flex;
+    position: center;
+    text-decoration: none;
+    /*display: inline-block;*/
+    padding: 8px 30px;
+    border-radius: 30px;
+    z-index: 9;
+}
+#text
+{
+    position: absolute;
+}
