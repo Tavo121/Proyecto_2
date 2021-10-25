@@ -16,7 +16,7 @@ public class Queue {
     private QueueNode tail = null;
 
     /**
-     * Método para verificar si el nodo se encuentra vacío
+     * Metodo para verificar si el nodo se encuentra vacío
      * @return Null
      */
     public boolean isEmpty() {

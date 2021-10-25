@@ -27,6 +27,22 @@ public class Expression_Node<T> {
     }
 
     /**
+     * Metodo para obtener el identificador de cada nodo.
+     * @return identificador del nodo.
+     */
+    public T getNode() {
+        return node;
+    }
+
+    /**
+     * Metodo para ingresar el identificador al nodo.
+     * @param node identificador que se quiere ingresar al nodo.
+     */
+    public void setNode(T node) {
+        this.node = node;
+    }
+
+    /**
      * Metodo para obtener el nodo ubicado a la derecha
      * @return Nodo ubicado a la derecha
      */

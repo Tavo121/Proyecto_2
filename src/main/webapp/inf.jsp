@@ -11,10 +11,22 @@
 <html>
 
 <head>
-    <title>Datos Recopilados</title>
+    <title>Calculadora</title>
+    <link rel="stylesheet" type="text/css" href="style.css"/>
 </head>
 
 <body>
+<form action="inf.jsp" method="post">
+    <section>
+        <img src="math.png" id="bg">
+        <h2 id="text">Ingrese la expresion matematica</h2>
+        <button>Enviar</button>
+    </section>
+    <label>
+        <input type="text" name="Grabber" placeholder="Expresion matematica" id="expresion">
+    </label>
+
+</form>
 
 <%
     Expression_Tree ExpTr= new Expression_Tree();
