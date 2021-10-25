@@ -2,7 +2,10 @@ package com.example.tree;
 import com.example.stack_queue.Queue;
 import com.example.stack_queue.Stack;
 
-public class Expression_Tree {
+import javax.servlet.http.HttpServlet;
+
+public class Expression_Tree{
+
     private Expression_Node<Object> root;
 
     public Expression_Tree(){
@@ -13,7 +16,7 @@ public class Expression_Tree {
         return this.root == null;
     }
 
-    public void organizeQS(String Expre){
+    public void organizeQS(String Expre) {
         int Elem = Expre.length();
         Queue cola = new Queue();
         Stack pila = new Stack();
@@ -57,7 +60,7 @@ public class Expression_Tree {
     public static void main(String[] args) {
         Expression_Tree tree = new Expression_Tree();
         //tree.organizeQS("(a+(b*c))+(((d*e)+f)*g)");
-        tree.organizeQS("(1+2-(4*9)+5)");
+        //tree.organizeQS("(1+2-(4*9)+5)");
         //a b c * + d e * f + g * +
     }
 }
