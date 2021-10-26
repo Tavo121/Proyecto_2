@@ -52,6 +52,7 @@ section h2
 {
     top: 220px;
     font-size: 45px;
+
 }
 section button
 {
@@ -81,4 +82,50 @@ label input
 #text
 {
     position: absolute;
+}
+
+.overlay {
+    background: rgba(0,0,0,.5);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    visibility: hidden;
+
+}
+
+.overlay.active {
+    visibility: visible;
+}
+
+.popup {
+    background: white;
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,.3);
+    border-radius: 3px;
+    font-family: 'Poppins', sans-serif;
+    padding: 20px;
+    text-align: center;
+    width: 500px;
+    height: 300px;
+}
+
+.popup .btn-close {
+    font-size: 16px;
+    line-height: 16px;
+    display: block;
+    text-align: right;
+    color: grey;
+    transition: .3s ease all;
+}
+.popup .btn-close:hover {
+    color: black;
+}
+.popup .h2 {
+    font-size: 28px;
+    font-weight: 500;
+    margin-bottom: 10px;
 }
