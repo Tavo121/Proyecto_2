@@ -15,7 +15,7 @@
 </head>
 
 <body>
-<form action="inf.jsp" method="post">
+<form method="post" id="loginForm">
 
     <section>
         <img src="math.png" id="bg">
@@ -24,7 +24,7 @@
     </section>
 
     <label>
-        <input type="text" name="Grabber" placeholder="Expresion matematica" id="expresion" re>
+        <input type="text" name="Grabber" placeholder="Expresion matematica" id="expresion" required>
     </label>
 
 </form>

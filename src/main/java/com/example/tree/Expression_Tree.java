@@ -41,12 +41,13 @@ public class Expression_Tree {
      * Metodo para ingresar en la cola la expresion matematica en forma posfija.
      * @param Expre parametro que contiene la expresion matematica.
      */
-    public void organizeQS(String Expre){
+    public Queue organizeQS(String Expre){
         int Elem = Expre.length();
         Queue cola = new Queue(); //cola que almacela la expresion posfija
         Stack pila = new Stack(); //pila que almacena temporalmente los operadores y parentesis.
 
         for(int i = 0; i<=Elem-1; i++){
+            String temp = "";
             char index = Expre.charAt(i);
 
             if( index == '(' || index == '+' || index == '-' || index == '/' || index == '*' || index == '%') { //es operador
@@ -65,15 +66,22 @@ public class Expression_Tree {
                 }
 
             }else{ //operandos
-                cola.enqueue(String.valueOf(index));
+                while(!Operator(String.valueOf(Expre.charAt(i))) && Expre.charAt(i) != ')' && Expre.charAt(i) != '('){
+                    temp = temp + Expre.charAt(i);
+                    i++;
+                    if (i >= Elem){
+                        break;
+                    }
+                }
+                cola.enqueue(temp);
+                i--;
             }
         }
 
         if (!pila.peek().equals("empty") && (!pila.peek().equals("("))) { //se asegura que todos los elementos de la pila se agreguen a la cola.
             cola.enqueue(pila.peek());
         }
-
-        createTree(cola);
+        return cola;
     }
 
     /**
@@ -82,24 +90,25 @@ public class Expression_Tree {
      * @return retorna el arbol de expresion binario creado.
      */
     public Expression_Node createTree(Queue cola){
-        java.util.Stack<Expression_Node> stack = new java.util.Stack<>(); //pila de
-        Expression_Node parent;
+        java.util.Stack<Expression_Node> stack = new java.util.Stack<>(); //pila de nodos
+        Expression_Node parent; //nodo padre que contiene los operadores
         int count = cola.size();
 
         for(int i = 0; i < count; i ++){
             String value = cola.peek();
-            if (!Operator(value)){
+            if (!Operator(value)){ //crea nodos con operandos
                 parent = new Expression_Node<>(value);
                 stack.push(parent);
                 cola.dequeue();
 
-            }else{
+            }else{ // crea nodos con operadores
                 parent = new Expression_Node<>(value);
                 parent.setRight(stack.pop());
                 parent.setLeft(stack.pop());
 
                 stack.push(parent);
 
+                //prueba de sub-arboles
                 System.out.println("Operador--------------------------------");
                 System.out.println(parent.getNode());
                 System.out.println(parent.getLeft().getNode());
@@ -112,5 +121,38 @@ public class Expression_Tree {
         stack.pop();
 
         return parent;
+    }
+
+    public int evaluate(Expression_Node<String> root){//se evalua el arbol
+
+        if (root == null){//nodo es nulo
+            return 0;
+        }
+        if (root.getLeft() == null && root.getRight() == null){//nodo hoja, retorna su valor entero.
+            return Integer.parseInt(root.getNode());
+
+        }
+
+        //realiza la evaluacion para subarboles a la derecha e izquierda
+        int left = evaluate(root.getLeft());
+        int right = evaluate(root.getRight());
+
+        //realiza las operaciones dependiendo del identificador del nodo
+        if (root.getNode().equals("+")){
+            return left + right;
+        }
+        if (root.getNode().equals("-")){
+            return left - right;
+        }
+        if (root.getNode().equals("/")){
+            return left / right;
+        }
+        if (root.getNode().equals("*")){
+            return left * right;
+        }
+
+        //Operacion modulo
+        return left % right;
+
     }
 }
