@@ -1,5 +1,4 @@
 package com.example;
-
 import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.annotation.*;
@@ -24,10 +23,20 @@ import com.example.tree.Expression_Tree;
  */
 @WebServlet(name = "AjaxController", value = "/AjaxController")
 public class AjaxController extends HttpServlet {
+
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
     }
 
+    /**
+     * Metodo el cual realiza el procesamiento de la expresion de forma de cadena, este puede recibir datos enviados
+     * del jsp por medio del request y responde con el respond
+     * @param request para realizar la solicitud de datos y recibirlos
+     * @param response para realizar el reenvio de datos devuelta
+     *
+     * @throws ServletException excepcion para el manejo de errores
+     * @throws IOException excepcion para el manejo de errores
+     */
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         response.setContentType("text/plain");

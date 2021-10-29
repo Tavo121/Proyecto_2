@@ -11,7 +11,8 @@ import com.example.stack_queue.Stack;
  * @version 1.0
  * @author Gustavo Alvarado y Byron Mata
  *
- * Descripción: Esta clase contiene los metodos necesarios para crear el arbol de expresion binario, desde poner la exprecion en notacion posfija hasta crear el arbol como tal.
+ * Descripción: Esta clase contiene los metodos necesarios para crear el arbol de expresion binario, desde poner la expresion en notacion
+ * posfija hasta crear el arbol como tal.
  */
 public class Expression_Tree {
     private Expression_Node<Object> root;
@@ -25,13 +26,12 @@ public class Expression_Tree {
 
     /**
      * Metodo para detectar si un nodo contiene un operador u operando
-     * @param node parametro que contiene el identificador del nodo (operador u operando).
+     * @param node contiene el identificador del nodo (operador u operando).
      * @return true si el nodo contiene un operador, false si el nodo contiene un operando.
      */
     public boolean Operator(String node){
         if (node.equals("+") || node.equals("-") || node.equals("/") || node.equals("*") || node.equals("%")){
             return true;
-
         }else{
             return false;
         }
@@ -40,6 +40,7 @@ public class Expression_Tree {
     /**
      * Metodo para ingresar en la cola la expresion matematica en forma posfija.
      * @param Expre parametro que contiene la expresion matematica.
+     * @return de la cola
      */
     public Queue organizeQS(String Expre){
         int Elem = Expre.length();
@@ -86,8 +87,8 @@ public class Expression_Tree {
 
     /**
      * Metodo que crea el arbol de expresion binario a partir de la cola.
-     * @param cola parametro que contiene la expresion en notacion posfija ingresada en la cola.
-     * @return retorna el arbol de expresion binario creado.
+     * @param cola contiene la expresion en notacion posfija ingresada en la cola.
+     * @return el arbol de expresion binario creado.
      */
     public Expression_Node createTree(Queue cola){
         java.util.Stack<Expression_Node> stack = new java.util.Stack<>(); //pila de nodos
@@ -123,6 +124,11 @@ public class Expression_Tree {
         return parent;
     }
 
+    /**
+     * Metodo para realizar la evaluación de los subarboles creado en el arbol
+     * @param root contiene la raíz del arbol creado
+     * @return operando modulo
+     */
     public int evaluate(Expression_Node<String> root){//se evalua el arbol
 
         if (root == null){//nodo es nulo

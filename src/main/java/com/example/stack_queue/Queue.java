@@ -39,7 +39,7 @@ public class Queue {
 
     /**
      * Metodo que extrae el último nodo que ingreso en la cola
-     * @return Dato contenido en el último nodo ingresado, es decir, la cabeza
+     * @return del dato contenido en el último nodo ingresado, es decir, la cabeza
      */
     public String dequeue() {
         String item = head.getData();
@@ -51,8 +51,8 @@ public class Queue {
     }
 
     /**
-     * Método que extrae el dato dado a "x" o "y" nodo de la cola
-     * @return * Dato o identificador contenido en el nodo
+     * Metodo que extrae el dato dado a "x" o "y" nodo de la cola
+     * @return del dato o identificador contenido en el nodo
      */
     public String peek() {
         if (head == null) {
@@ -61,6 +61,10 @@ public class Queue {
         return head.getData();
     }
 
+    /**
+     * Metodo que permite obtener el tamaño de la cola
+     * @return del tamaño de la cola
+     */
     public int size() {
         int cnt = 0;
         for (QueueNode node = head; node != null; node = node.next) {

@@ -23,7 +23,7 @@ public class Stack {
 
     /**
      * Metodo que se encarga de insertar los nodos con sus respectivos identificadores en el top de la pila
-     * @param data Indicador del nodo
+     * @param data indicador del nodo
      */
     public void push(String data) {
         StackNode newSNode = new StackNode(data);
@@ -42,7 +42,7 @@ public class Stack {
 
     /**
      * Metodo que extrae el dato dado a "x" o "y" nodo de la pila
-     * @return Identificador del nodo solicitado
+     * @return del identificador del nodo solicitado
      */
     public String peek() {
         if(head == null){

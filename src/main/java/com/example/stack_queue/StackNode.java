@@ -18,7 +18,7 @@ public class StackNode {
 
     /**
      * Constructor de los nodos y del identificador
-     * @param data Identificador que se le asignara a cada uno de los nodos que se creen
+     * @param data identificador que se le asignara a cada uno de los nodos que se creen
      */
     public StackNode(String data) {
         this.next = null;
@@ -27,7 +27,7 @@ public class StackNode {
 
     /**
      * Metodo para obtener el identificador del nodo indicado
-     * @return Identificador que el nodo contiene
+     * @return del identificador que el nodo contiene
      */
     public String getData() { return this.data; }
 }

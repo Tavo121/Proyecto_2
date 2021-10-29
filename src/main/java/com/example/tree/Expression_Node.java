@@ -18,7 +18,7 @@ public class Expression_Node<T> {
 
     /**
      * Constructor de los nodos
-     * @param node Identificador
+     * @param node identificador
      */
     public Expression_Node(T node){
         this.right = null;
@@ -28,7 +28,7 @@ public class Expression_Node<T> {
 
     /**
      * Metodo para obtener el identificador de cada nodo.
-     * @return identificador del nodo.
+     * @return del identificador del nodo.
      */
     public T getNode() {
         return node;
@@ -36,7 +36,7 @@ public class Expression_Node<T> {
 
     /**
      * Metodo para obtener el nodo ubicado a la derecha
-     * @return Nodo ubicado a la derecha
+     * @return del nodo ubicado a la derecha
      */
     public Expression_Node getRight() {
         return right;
@@ -44,7 +44,7 @@ public class Expression_Node<T> {
 
     /**
      * Metodo para asignar el identificador a un nodo  
-     * @param right Identificador de derecha para asignar a un nodo
+     * @param right identificador de derecha para asignar a un nodo
      */
     public void setRight(Expression_Node right) {
         this.right = right;
@@ -52,7 +52,7 @@ public class Expression_Node<T> {
 
     /**
      * Metodo para obtener el nodo ubicado a la izquierda
-     * @return Nodo ubicado a la izquierdo
+     * @return del nodo ubicado a la izquierdo
      */
     public Expression_Node getLeft() {
         return left;
@@ -60,7 +60,7 @@ public class Expression_Node<T> {
 
     /**
      * Metodo para asignar el identificador a un nodo
-     * @param left Identificador de izquierda para asignar a un nodo
+     * @param left identificador de izquierda para asignar a un nodo
      */
     public void setLeft(Expression_Node left) {
         this.left = left;
