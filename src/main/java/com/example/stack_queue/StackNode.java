@@ -7,7 +7,7 @@ package com.example.stack_queue;
  * Lenguaje: Java
  * Clase: StackNode
  * @version 1.0
- * @authors Gustavo Alvarado y Byron Mata
+ * @author Gustavo Alvarado y Byron Mata
  *
  * Descripción: Esta clase contiene los metodos getter y setter que son utilizados en para los nodos, a su vez crea los
  * nodos como tal
@@ -26,26 +26,8 @@ public class StackNode {
     }
 
     /**
-     * Metodo para asignar el identificador
-     * @param data Valor del identificador para asignar
-     */
-    public void setData(String data) { this.data = data; }
-
-    /**
      * Metodo para obtener el identificador del nodo indicado
      * @return Identificador que el nodo contiene
      */
     public String getData() { return this.data; }
-
-    /**
-     * Metodo que obtiene el nodo siguiente
-     * @return Nodo siguiente
-     */
-    public StackNode getNext() { return this.next; }
-
-    /**
-     * Metodo que hace que el indicador apunte hacia otro nodo
-     * @param BNode Asignacion del siguiente nodo
-     */
-    public void setNext(StackNode BNode) { this.next = BNode; }
 }

@@ -24,22 +24,19 @@
 </head>
 
 <body>
-
-
     <form>
         <section>
             <img src="math.png" id="bg">
             <h2 id="text">Ingrese la expresion matematica</h2>
             <input type="button" id="btn" value="Enviar">
+            <a href="History.jsp" id="historial">Historial de expresiones</a>
         </section>
 
-        <label>
+        <label id="lb1">
             <input type="text" placeholder="Expresion matematica" id="name">
+            <span id="result"></span>
         </label>
-
-        <span id="result"></span>
     </form>
-
 </body>
 
 </html>

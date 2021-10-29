@@ -18,16 +18,6 @@ header
     align-items: center;
 
 }
-header .logo:hover
-{
-    position: absolute;
-    color: #000000;
-    font-weight: 700;
-    text-decoration: none;
-    font-size: 2em;
-    text-transform: uppercase;
-    Letter-spacing: 2px;
-}
 section
 {
     position: absolute;
@@ -56,11 +46,13 @@ section h2
 }
 section input
 {
+    position: relative;
     text-decoration: none;
     padding: 8px 30px;
     border-radius: 10px;
     z-index: 9;
-    transform: translateY(35px);
+    top: 35px;
+    left: 100px;
 }
 label
 {
@@ -68,7 +60,7 @@ label
     top: 320px;
     Left: 345px;
     width: 800px;
-    height: 100px;
+    height: 200px;
 }
 label input
 {
@@ -78,6 +70,23 @@ label input
     border-radius: 10px;
 
 }
+label span
+{
+    text-decoration: none;
+}
+section a
+{
+    color: white;
+    background: #392ed1;
+    position: relative;
+    padding-inline: 8px 10px;
+    font-size: 18px;
+    top: 150px;
+    height: 40px;
+    left: -70px;
+    border-radius: 10px;
+}
+
 #text
 {
     position: absolute;

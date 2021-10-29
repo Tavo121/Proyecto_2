@@ -7,7 +7,7 @@ package com.example.tree;
  * Lenguaje: Java
  * Clase: Expression_Node
  * @version 1.0
- * @authors Gustavo Alvarado y Byron Mata
+ * @author Gustavo Alvarado y Byron Mata
  *
  * Descripción: Esta clase contiene los metodos getter y setter que son utilizados en para los nodos, a su vez crea los
  * nodos como tal
@@ -32,14 +32,6 @@ public class Expression_Node<T> {
      */
     public T getNode() {
         return node;
-    }
-
-    /**
-     * Metodo para ingresar el identificador al nodo.
-     * @param node identificador que se quiere ingresar al nodo.
-     */
-    public void setNode(T node) {
-        this.node = node;
     }
 
     /**

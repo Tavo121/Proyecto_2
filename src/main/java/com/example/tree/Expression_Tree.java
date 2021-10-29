@@ -9,7 +9,7 @@ import com.example.stack_queue.Stack;
  * Lenguaje: Java
  * Clase: Expression_Tree
  * @version 1.0
- * @authors Gustavo Alvarado y Byron Mata
+ * @author Gustavo Alvarado y Byron Mata
  *
  * Descripción: Esta clase contiene los metodos necesarios para crear el arbol de expresion binario, desde poner la exprecion en notacion posfija hasta crear el arbol como tal.
  */

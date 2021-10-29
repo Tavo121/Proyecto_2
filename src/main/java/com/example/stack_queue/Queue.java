@@ -7,7 +7,7 @@ package com.example.stack_queue;
  * Lenguaje: Java
  * Clase: Queue
  * @version 1.0
- * @authors Gustavo Alvarado y Byron Mata
+ * @author Gustavo Alvarado y Byron Mata
  *
  * Descripción: Esta clase contiene algunos métodos que son utilizados en la cola
  */
@@ -67,14 +67,6 @@ public class Queue {
             cnt++;
         }
         return cnt;
-    }
-
-    public void print() {
-        QueueNode temp = head;
-        while(temp != null){
-            System.out.println(temp.getData());
-            temp = head.getNext();
-        }
     }
 
 }

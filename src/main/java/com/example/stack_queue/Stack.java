@@ -7,7 +7,7 @@ package com.example.stack_queue;
  * Lenguaje: Java
  * Clase: Stack
  * @version 1.0
- * @authors Gustavo Alvarado y Byron Mata
+ * @author Gustavo Alvarado y Byron Mata
  *
  * Descripción: Esta clase contiene algunos métodos que son utilizados en la pila
  */
@@ -50,13 +50,4 @@ public class Stack {
         }
         return head.getData();
     }
-
-    /**
-     * Metodo para verificar si el nodo se encuentra vacío
-     * @return Null
-     */
-    public boolean isEmpty() {
-        return head == null;
-    }
-
 }
